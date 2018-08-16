@@ -5,13 +5,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#ed3270">
+    android:background="#f7295c">
 
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/ic_youtube"
-        android:id="@+id/imgYoutbe"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f181a1"
+        android:orientation="vertical"
+        android:weightSum="10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:background="@color/colorWhite">
+            <EditText
+                android:id="@+id/edInput"
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_editText"
+                android:textColorHint="#09b1b1"
+                android:textColor="#000000"/>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_micro"
+                    android:id="@+id/imgSearch"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#f43984"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/black"
+            android:id="@+id/tablayout">
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_name"
+                android:id="@+id/tabSearchName"/>
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_playlist"
+                android:id="@+id/tabSearchPlaylist"/>
+        </android.support.design.widget.TabLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#f7295c"
+        android:id="@+id/linerLayout"
+        android:visibility="invisible">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_youtube"
+            android:id="@+id/imgYoutbe"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+
 
 </RelativeLayout>

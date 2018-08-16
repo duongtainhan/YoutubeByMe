@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">YoutubeByMe</string>
+    <string name="hint_editText">   Tìm kiếm trên Youtube</string>
+    <string name="hint_search_name">Tìm kiếm theo tên trên youtube</string>tên
+    <string name="hint_search_playlist">Tìm theo tên danh sách phát</string>
+    <string name="search_name">Tìm kiếm theo tên</string>tên
+    <string name="search_playlist">Tìm theo playlist</string>
 </resources>
