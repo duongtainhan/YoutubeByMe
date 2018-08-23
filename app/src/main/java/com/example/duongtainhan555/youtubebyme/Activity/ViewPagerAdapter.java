@@ -1,16 +1,16 @@
-package com.example.duongtainhan555.youtubebyme;
+package com.example.duongtainhan555.youtubebyme.Activity;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.duongtainhan555.youtubebyme.Fragment.SearchNameFragment;
-import com.example.duongtainhan555.youtubebyme.Fragment.SearchPlaylistFragment;
+import com.example.duongtainhan555.youtubebyme.Fragment.TrendingFragment;
 
-public class PageAdapter extends FragmentPagerAdapter {
+public class ViewPagerAdapter extends FragmentPagerAdapter {
     private int numOfTabs;
 
-    PageAdapter(FragmentManager fm, int numOfTabs) {
+
+    ViewPagerAdapter(FragmentManager fm, int numOfTabs) {
         super(fm);
         this.numOfTabs = numOfTabs;
     }
@@ -19,9 +19,11 @@ public class PageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new SearchNameFragment();
+                return new TrendingFragment();
             case 1:
-                return new SearchPlaylistFragment();
+                return new TrendingFragment();
+            case 2:
+                return new TrendingFragment();
             default:
                 return null;
         }

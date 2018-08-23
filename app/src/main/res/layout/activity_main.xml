@@ -4,74 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#f7295c">
+    tools:context=".Activity.MainActivity"
+    android:background="@color/colorRed">
 
-    <LinearLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:background="@drawable/background_relative"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="15dp">
+        <EditText
+            android:id="@+id/edInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/imgSearch"
+            android:hint="  Tìm kiếm trên Youtube"
+            android:textColorHint="#9e9e9e"
+            android:textColor="#000000"
+            android:textSize="19sp"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:layout_toRightOf="@id/imgSetting"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="46dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imgSearch"
+            android:onClick="EventClickSearch"
+            android:src="@drawable/ic_micro"
+            android:scaleType="fitXY"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="46dp"
+            android:id="@+id/imgSetting"
+            android:src="@drawable/ic_setting"/>
+    </RelativeLayout>
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f181a1"
-        android:orientation="vertical"
-        android:weightSum="10">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="horizontal"
-            android:weightSum="10"
-            android:background="@color/colorWhite">
-            <EditText
-                android:id="@+id/edInput"
-                android:layout_width="0dp"
-                android:layout_weight="9"
-                android:layout_height="match_parent"
-                android:hint="@string/hint_editText"
-                android:textColorHint="#09b1b1"
-                android:textColor="#000000"/>
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_micro"
-                    android:id="@+id/imgSearch"/>
-            </RelativeLayout>
-
-        </LinearLayout>
+        android:layout_below="@id/relativeLayout">
         <android.support.design.widget.TabLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="#f43984"
+            android:layout_height="wrap_content"
+            android:background="@color/colorRed"
             app:tabSelectedTextColor="@android:color/white"
-            app:tabTextColor="@android:color/black"
+            app:tabTextColor="#b7b4c6"
             android:id="@+id/tablayout">
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/search_name"
-                android:id="@+id/tabSearchName"/>
+                android:text="TOP 20 TRENDING"
+                android:id="@+id/tabTrending" />
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/search_playlist"
-                android:id="@+id/tabSearchPlaylist"/>
+                android:text="Yêu thích"
+                android:id="@+id/tabFavourite"/>
         </android.support.design.widget.TabLayout>
         <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="8"/>
-
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager"
+            android:background="@color/colorWhite"
+            android:layout_below="@id/tablayout"/>
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:background="#f7295c"
+        android:background="#ef2e5d"
         android:id="@+id/linerLayout"
         android:visibility="invisible">
         <ImageView

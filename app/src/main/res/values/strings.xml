@@ -3,6 +3,8 @@
     <string name="hint_editText">   Tìm kiếm trên Youtube</string>
     <string name="hint_search_name">Tìm kiếm theo tên trên youtube</string>tên
     <string name="hint_search_playlist">Tìm theo tên danh sách phát</string>
-    <string name="search_name">Tìm kiếm theo tên</string>tên
-    <string name="search_playlist">Tìm theo playlist</string>
+    <string name="search_name">Theo tên</string>tên
+    <string name="search_playlist">Theo playlist</string>
+    <string name="favourite">Yêu thích</string>
+    <string name="youtube_mini">YOUTUBE MINI</string>
 </resources>
